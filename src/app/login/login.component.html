@@ -1,0 +1,76 @@
+<div class="login">
+  <app-header></app-header>
+  <div class="login-container">
+    <div class="sub-container">
+      <form (ngSubmit)="loginForm.valid && login()" #loginForm="ngForm">
+        <div class="login-form">
+          <div class="form-group">
+            <h2>Login</h2>
+            <label>Email</label>
+            <input
+              type="email"
+              id="email"
+              class="form-control"
+              name="email"
+              [(ngModel)]="email"
+              required
+              email
+            />
+            <div
+              *ngIf="
+                loginForm.controls['email'].invalid &&
+                (loginForm.controls['email'].dirty ||
+                  loginForm.controls['email'].touched)
+              "
+              class="text-danger"
+            >
+              <div *ngIf="loginForm.controls['email'].errors?.['required']">
+                Email is required.
+              </div>
+              <div *ngIf="loginForm.controls['email'].errors?.['email']">
+                Invalid email format.
+              </div>
+            </div>
+            <label>Password</label>
+            <input
+              type="password"
+              id="password"
+              class="form-control"
+              name="password"
+              [(ngModel)]="password"
+              required
+              minlength="6"
+            />
+            <div
+              *ngIf="
+                loginForm.controls['password'].invalid &&
+                (loginForm.controls['password'].dirty ||
+                  loginForm.controls['password'].touched)
+              "
+              class="text-danger"
+            >
+              <div *ngIf="loginForm.controls['password'].errors?.['required']">
+                Password is required.
+              </div>
+              <div *ngIf="loginForm.controls['password'].errors?.['minlength']">
+                Password must be at least 6 characters long.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button type="submit" class="btn-btn" (click)="login()">
+              Log in
+            </button>
+            <p class="new">
+              <a routerLink="/signup">New Member? Sign Up Now</a>
+            </p>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="img-container">
+      <img src="/assets/Loginimage.jpg" alt="">
+    </div>
+  </div>
+</div>
