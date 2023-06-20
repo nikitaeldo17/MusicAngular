@@ -29,7 +29,7 @@
             "styles": [
               "src/styles.css",
         "node_modules/bootstrap-icons/font/bootstrap-icons.css",
-        "C:/Users/235748/capstone/node_modules/bootstrap/dist/css/bootstrap.min.css"
+        "C:/Users/235748/MusicAngular/capstone/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
