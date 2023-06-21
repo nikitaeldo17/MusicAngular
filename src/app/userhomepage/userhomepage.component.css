@@ -1,6 +1,7 @@
 
   .wrapper {
     display: flex;
+    flex-direction: column;
   }
 
   .sidebar {
@@ -80,10 +81,11 @@ margin-left: 10px;
 
 .info {
 
-height: 100vh;
+height: 80vh;
 padding: 10px;
 background-color: #f8f9fa;
 border-radius: 5px;
+
 }
 
 .image-container {
@@ -102,3 +104,109 @@ border-radius: 5px;
     width: 200px;
     height: 200px;
 }
+
+
+  .music-bar {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: blueviolet;
+  }
+ .mus-sub{
+  width: 75em;
+  height: 3em;
+  
+   display: flex;
+   flex-direction: row;
+  
+ }
+
+ 
+ 
+.buttons{
+padding-left: 30em;
+ 
+}
+
+.rating-stars{
+  font-size: 30px;
+   margin-inline: 197px; 
+  color: #ffd700;
+  
+ 
+}
+
+
+ /* .footer-main{
+  
+  position: relative;
+  bottom: 0;
+  background-color: black;
+} */
+
+/* .foot{
+  background-color: pink;
+  padding: 40px;
+  margin-bottom: 2px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+} */ 
+
+ 
+
+
+.play-btn {
+  margin-right: 10px;
+}
+
+
+
+/* .rating-stars i {
+  margin-right: 5px;
+} */
+
+
+@keyframes fade{
+
+ 
+
+  0%,25%{
+
+    background-image: url('https://images.unsplash.com/photo-1478737270239-2f02b77fc618?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80')
+  }
+
+  25%,50%{
+
+    background-image: url('https://images.unsplash.com/photo-1471614654469-512ee6a4397a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+  }
+
+  50%,75%{
+
+    background-image: url('https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80');
+   
+  }
+
+  75%,100%{
+
+    background-image: url('https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')
+
+  }
+ 
+
+}
+.runningimages{
+  animation: fade 5s infinite;
+
+background-position: center;
+
+background-repeat: no-repeat;
+
+background-size: cover;
+
+height: 300px;
+}
+
+
+

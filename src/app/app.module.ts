@@ -12,13 +12,16 @@ import { HomeComponent } from './home/home.component';
 import { UserhomepageComponent } from './userhomepage/userhomepage.component';
 
 import { HeaderComponent } from './header/header.component';
-import { CreateComponent } from './admin/create/create.component';
+//import { CreateComponent } from './admin/create/create.component';
 import { UpdateComponent } from './admin/update/update.component';
 import { RetrieveComponent } from './admin/retrieve/retrieve.component';
 import{ HttpClientModule} from'@angular/common/http';
 
 import { AdminhomeComponent } from './adminhome/adminhome.component';
 import { ProfileComponent } from './profile/profile.component';
+import { DescComponent } from './desc/desc.component';
+import { CreateeComponent } from './createe/createe.component';
+
 
 @NgModule({
   declarations: [
@@ -31,12 +34,15 @@ import { ProfileComponent } from './profile/profile.component';
     UserhomepageComponent,
   
     HeaderComponent,
-    CreateComponent,
+  
     UpdateComponent,
     RetrieveComponent,
    
     AdminhomeComponent,
         ProfileComponent,
+        DescComponent,
+        CreateeComponent,
+      
    
    
   ],

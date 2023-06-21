@@ -1,7 +1,7 @@
 export class loginsignup1{
     id:number|any;
     username:string = '';
-    password:number|undefined;
+    password:string='';
     firstname:string='';
     lastname:string='';
     conpassword:string|undefined;

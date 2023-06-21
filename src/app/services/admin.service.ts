@@ -9,18 +9,16 @@ import { loginsignup1 } from '../admin/model/loginsignup1';
 })
 export class AdminService {
 
-  baseurl='http://localhost:8083/1.0/admin/get';
-  baseurl1='http://localhost:8083/1.0/admin/delete';
+  baseurl='http://localhost:9093/api/1.0/admin/get';
+  baseurl1='http://localhost:9093/api/1.0/admin/delete';
  
    constructor(private http: HttpClient) {
  
     }
- // ngOnInit(): void {
- //   throw new Error('Method not implemented.');
- // }
+
  
    getMusics(){
-     return this.http.get<Admin[]>('http://localhost:8083/1.0/admin/allmusics');
+     return this.http.get<Admin[]>('http://localhost:9093/api/1.0/admin/allmusics');
    }
    
    getMusicById(id:number){
@@ -32,13 +30,13 @@ export class AdminService {
    saveMusic(admin:Admin):
     Observable<Object>{
      
-    return this.http.post( 'http://localhost:8083/1.0/admin/addmusic',admin);
+    return this.http.post( 'http://localhost:9093/api/1.0/admin/addmusic',admin);
     }
  
  
     updateMusic(admin:Admin):
    Observable<Object>{
-      return this.http.put( 'http://localhost:8083/1.0/admin/update',admin);
+      return this.http.put( 'http://localhost:9093/api/1.0/admin/update',admin);
      
     }
     deleteMusicbyId(id:number):
@@ -46,23 +44,7 @@ export class AdminService {
       return this.http.delete(`${this.baseurl1}/${id}`);
    }
 
-  //  registerUser(loginSignUp1: loginsignup1): Observable<loginsignup1> {
-  //   return this.http.post<loginsignup1>('http://localhost:8088/api/user/register',loginSignUp1);
-  // }
-  
-
-  //   loginUser(loginSignUp1:loginsignup1):
-  //  Observable<Object>{
-  //     return this.http.post( 'http://localhost:8088/api/users/login',loginSignUp1);
-     
-  //   }
-  //   baseurl2='http://localhost:8088/api/user/details';
-
-  //   fetchUser(username:string):
-  //   Observable<Object>{
-  //      return this.http.get<loginsignup1[]>( `${this.baseurl2}/${username}`);
-      
-  //    }
+ 
 }
 
 

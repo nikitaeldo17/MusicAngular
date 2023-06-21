@@ -1,13 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AdminService } from 'src/app/services/admin.service';
+
+
 
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
-export class UpdateComponent {
+export class UpdateComponent implements OnInit{
   musicId: number = 0;
   admin: any;
  
@@ -26,10 +28,10 @@ export class UpdateComponent {
      this.adminService.saveMusic(this.admin).subscribe(
        (data) => {
         this.gotoMusicList();
-        //  console.log('Product updated successfully');
+      
        },
        (error) => {
-         console.log('Error updating product:', error);
+         console.log('Error updating music:', error);
        }
      );
    }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AdminService } from 'src/app/services/admin.service';
 import { Admin } from '../model/Admin';
@@ -8,7 +8,7 @@ import { Admin } from '../model/Admin';
   templateUrl: './retrieve.component.html',
   styleUrls: ['./retrieve.component.css']
 })
-export class RetrieveComponent {
+export class RetrieveComponent implements OnInit {
  
   constructor(private service:AdminService,private router:Router){
 
